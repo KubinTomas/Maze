@@ -1,0 +1,8 @@
+I will try to write down my project progress.
+
+15.2. 2019 /After couple of hours../
+- add whole project structure
+- create basic generate maze algorithm
+- put everything in separete classes to reuse it and scale it well
+- put settings in static classes for easy accessing
+
