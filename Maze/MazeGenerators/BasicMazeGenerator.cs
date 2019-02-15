@@ -44,7 +44,13 @@ namespace Maze.MazeGenerators
                 {
                     var position = new Point(x, y);
 
-                    if (IsPostionWall(position)) AddWall(position);
+                    if (IsPostionWall(position))
+                        AddWall(position);
+                    else if (LeadingTile.CanCreateLeadingTile(position, new Point(Maze.GetLength(1) - 1, Maze.GetLength(0) - 1), Maze))
+                        AddLeadingTile(position);
+                    else
+                        AddRoadTile(position);
+
                 }
             }
         }
@@ -75,6 +81,18 @@ namespace Maze.MazeGenerators
             var wall = new Wall(position, TileSetting.Size, TileSetting.WallBrush);
 
             Maze[position.X, position.Y] = wall;
+        }
+        private void AddLeadingTile(Point position)
+        {
+            var leadingTile = new LeadingTile(position, TileSetting.Size, TileSetting.LeadingBrush);
+
+            Maze[position.X, position.Y] = leadingTile;
+        }
+        private void AddRoadTile(Point position)
+        {
+            var roadTile = new RoadTile(position, TileSetting.Size, TileSetting.RoadBrush);
+
+            Maze[position.X, position.Y] = roadTile;
         }
     }
 }

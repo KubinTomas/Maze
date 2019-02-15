@@ -8,3 +8,13 @@ C:\Users\Kubin\OneDrive\Plocha\Work\Programming\Maze\Maze\obj\Debug\Maze.exe
 C:\Users\Kubin\OneDrive\Plocha\Work\Programming\Maze\Maze\obj\Debug\Maze.pdb
 C:\Users\Kubin\OneDrive\Plocha\Work\Programming\Maze\Maze\obj\Debug\Maze.Maze.resources
 C:\Users\Kubin\OneDrive\Plocha\Work\Programming\Maze\Maze\obj\Debug\Maze.csprojAssemblyReference.cache
+C:\Users\Kubin\Desktop\Projects to portfolio\Uploaded projects\Maze\Maze\bin\Debug\Maze.exe.config
+C:\Users\Kubin\Desktop\Projects to portfolio\Uploaded projects\Maze\Maze\bin\Debug\Maze.exe
+C:\Users\Kubin\Desktop\Projects to portfolio\Uploaded projects\Maze\Maze\bin\Debug\Maze.pdb
+C:\Users\Kubin\Desktop\Projects to portfolio\Uploaded projects\Maze\Maze\obj\Debug\Maze.csprojAssemblyReference.cache
+C:\Users\Kubin\Desktop\Projects to portfolio\Uploaded projects\Maze\Maze\obj\Debug\Maze.Maze.resources
+C:\Users\Kubin\Desktop\Projects to portfolio\Uploaded projects\Maze\Maze\obj\Debug\Maze.Properties.Resources.resources
+C:\Users\Kubin\Desktop\Projects to portfolio\Uploaded projects\Maze\Maze\obj\Debug\Maze.csproj.GenerateResource.cache
+C:\Users\Kubin\Desktop\Projects to portfolio\Uploaded projects\Maze\Maze\obj\Debug\Maze.csproj.CoreCompileInputs.cache
+C:\Users\Kubin\Desktop\Projects to portfolio\Uploaded projects\Maze\Maze\obj\Debug\Maze.exe
+C:\Users\Kubin\Desktop\Projects to portfolio\Uploaded projects\Maze\Maze\obj\Debug\Maze.pdb
