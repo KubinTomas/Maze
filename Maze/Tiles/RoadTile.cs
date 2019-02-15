@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Maze.Tiles
 {
-    public class Wall : Tile
+    public class RoadTile : Tile
     {
-        public Wall(Point arrayPosition, Size size, Brush color) : base(arrayPosition, size, color)
+        public RoadTile(Point arrayPosition, Size size, Brush color) : base(arrayPosition, size, color)
         {
         }
     }

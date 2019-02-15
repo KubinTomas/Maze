@@ -9,10 +9,30 @@ namespace Maze.Tiles
 {
     public abstract class Tile
     {
-        public Point Position { get; set; }
+        protected Point ArrayPosition { get; set; }
 
-        public Size Size { get; set; }
+        protected Size Size { get; set; }
 
-        public Color Color { get; set; }
+        protected Brush Color { get; set; }
+
+        public Tile(Point arrayPosition, Size size, Brush color)
+        {
+            ArrayPosition = arrayPosition;
+            Size = size;
+            Color = color;
+
+        }
+        protected Rectangle GetRectangle()
+        {
+           return new Rectangle(GetPosition(), Size);
+        }
+        private Point GetPosition()
+        {
+            return new Point(ArrayPosition.X * Size.Width, ArrayPosition.Y * Size.Height);
+        }
+        public void Draw(Graphics graphics)
+        {
+            graphics.FillRectangle(Color, GetRectangle());
+        }
     }
 }

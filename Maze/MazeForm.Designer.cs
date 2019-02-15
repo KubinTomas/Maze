@@ -39,6 +39,8 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Maze";
             this.Text = "Maze";
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Maze_Paint);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Maze_KeyDown);
             this.ResumeLayout(false);
 
         }

@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Maze.Tiles
+namespace Maze.Settings
 {
-    public class BaseTile : Tile
+    static class MazeSetting
     {
+        public static Size MazeSize = new Size(10,10);
     }
 }

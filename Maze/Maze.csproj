@@ -56,8 +56,10 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Settings\MazeFormSetting.cs" />
-    <Compile Include="Tiles\BaseTile.cs" />
-    <Compile Include="Tiles\EmptyTile.cs" />
+    <Compile Include="Settings\MazeSetting.cs" />
+    <Compile Include="Settings\TileSetting.cs" />
+    <Compile Include="Tiles\LeadingTile.cs" />
+    <Compile Include="Tiles\RoadTile.cs" />
     <Compile Include="Tiles\Tile.cs" />
     <Compile Include="Tiles\Wall.cs" />
     <EmbeddedResource Include="MazeForm.resx">
