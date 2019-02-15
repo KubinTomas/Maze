@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\MazeController.cs" />
     <Compile Include="MazeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,6 +59,7 @@
     <Compile Include="Settings\MazeFormSetting.cs" />
     <Compile Include="Settings\MazeSetting.cs" />
     <Compile Include="Settings\TileSetting.cs" />
+    <Compile Include="Singletons\Refresher.cs" />
     <Compile Include="Tiles\LeadingTile.cs" />
     <Compile Include="Tiles\RoadTile.cs" />
     <Compile Include="Tiles\Tile.cs" />
