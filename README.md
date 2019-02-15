@@ -20,6 +20,12 @@ I was and still am curious about this project.
 - start/finish
   - add start
   - add finish
-- implement path finding algorithm
+- implement a path finding algorithm
 - connect all futures together expand ui
 - slow {animated} maze build / path build
+
+
+**Demo**
+![alt text](https://github.com/KubinTomas/Maze/blob/master/demoImages/demo1.png)
+
+![alt text](https://github.com/KubinTomas/Maze/blob/master/demoImages/demo2.png)
