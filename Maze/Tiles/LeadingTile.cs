@@ -17,7 +17,7 @@ namespace Maze.Tiles
 
         public static bool CanCreateLeadingTile(Point arrayPosition, Point arrayMaxSize, Tile[,] maze)
         {
-            if (!IsWallDistanceBigEnough(arrayPosition, arrayMaxSize)) //&& !HasSpaceAround(arrayPosition, arrayMaxSize, maze)
+            if (!IsWallDistanceBigEnough(arrayPosition, arrayMaxSize) || !HasSpaceAround(arrayPosition, arrayMaxSize, maze)) 
                 return false;
 
             return true;

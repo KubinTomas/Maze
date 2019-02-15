@@ -38,15 +38,15 @@ namespace Maze.MazeGenerators
         /// </summary>
         private void InitMazeArray()
         {
-            for (int y = 0; y < Maze.GetLength(0); y++)
+            for (int y = 0; y < Maze.GetLength(1); y++)
             {
-                for (int x = 0; x < Maze.GetLength(1); x++)
+                for (int x = 0; x < Maze.GetLength(0); x++)
                 {
                     var position = new Point(x, y);
 
                     if (IsPostionWall(position))
                         AddWall(position);
-                    else if (LeadingTile.CanCreateLeadingTile(position, new Point(Maze.GetLength(1) - 1, Maze.GetLength(0) - 1), Maze))
+                    else if (LeadingTile.CanCreateLeadingTile(position, new Point(Maze.GetLength(0) - 1, Maze.GetLength(1) - 1), Maze))
                         AddLeadingTile(position);
                     else
                         AddRoadTile(position);

@@ -22,9 +22,9 @@ namespace Maze.MazeGenerators
         }
         public void DrawMaze(Graphics graphics)
         {
-            for (int y = 0; y < Maze.GetLength(0); y++)
+            for (int y = 0; y < Maze.GetLength(1); y++)
             {
-                for (int x = 0; x < Maze.GetLength(1); x++)
+                for (int x = 0; x < Maze.GetLength(0); x++)
                 {
                     DrawMaze(Maze[x, y], graphics);
                 }
