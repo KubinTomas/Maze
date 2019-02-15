@@ -12,8 +12,7 @@ namespace Maze.Tiles
         private static readonly int minOffsetFromWall = 2;
 
         public LeadingTile(Point arrayPosition, Size size, Brush color) : base(arrayPosition, size, color)
-        {
-        }
+        { }
 
         public static bool CanCreateLeadingTile(Point arrayPosition, Point arrayMaxSize, Tile[,] maze)
         {
@@ -82,6 +81,10 @@ namespace Maze.Tiles
                 return true;
 
             return false;
+        }
+        public static bool IsLeadingTile(Tile tile)
+        {
+            return tile is LeadingTile;
         }
     }
 }

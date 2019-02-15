@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\DirectionController.cs" />
     <Compile Include="Controllers\MazeController.cs" />
     <Compile Include="MazeForm.cs">
       <SubType>Form</SubType>

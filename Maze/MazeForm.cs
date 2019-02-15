@@ -50,8 +50,9 @@ namespace Maze
         private void Maze_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.G) _mazeController.MazeGenerator.Generate();
+            if (e.KeyCode == Keys.N) _mazeController.GenerateNewMaze();
             if (e.KeyCode == Keys.R) Refresher.Instance.Refresh();
-            if (e.KeyCode == Keys.N) Refresher.Instance.Refresh();
+
 
         }
 

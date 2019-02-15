@@ -1,4 +1,5 @@
-﻿using Maze.Settings;
+﻿using Maze.Controllers;
+using Maze.Settings;
 using Maze.Tiles;
 using System;
 using System.Collections.Generic;
@@ -15,12 +16,15 @@ namespace Maze.MazeGenerators
     /// </summary>
     public class BasicMazeGenerator : MazeGenerator
     {
-
         private Random _random;
+
+        private List<LeadingTile> _leadingTiles;
+
 
         public BasicMazeGenerator(Size mazeSize)
         {
             _mazeSize = mazeSize;
+            _leadingTiles = new List<LeadingTile>();
 
             _random = new Random();
 
@@ -32,6 +36,47 @@ namespace Maze.MazeGenerators
             ClearMaze();
 
             InitMazeArray();
+
+            BuildWalls();
+        }
+        private void BuildWalls()
+        {
+            while(_leadingTiles.Count > 0)
+            {
+                var leadingTile = GetRandomLeadingTile();
+
+                var wallBuildDirection = GetRandomWallBuildDirection();
+
+                BuildWall(leadingTile.ArrayPosition, wallBuildDirection);
+            }
+        }
+        private void BuildWall(Point arrayPosition, DirectionController.WallBuildDirection direction)
+        {
+            HandleLeadingTile(arrayPosition);
+
+            if (Maze[arrayPosition.X, arrayPosition.Y] != null && Maze[arrayPosition.X, arrayPosition.Y] is Wall)
+                return;
+
+            var wall = new Wall(arrayPosition, TileSetting.Size, TileSetting.WallBrush);
+
+            Maze[arrayPosition.X, arrayPosition.Y] = wall;
+
+            BuildWall(DirectionController.GetNextDirection(arrayPosition, direction), direction);
+        }
+        private DirectionController.WallBuildDirection GetRandomWallBuildDirection()
+        {
+            var randomValue = _random.Next(0, 4);
+
+            if(randomValue == 0) return DirectionController.WallBuildDirection.Up;
+            if(randomValue == 1) return DirectionController.WallBuildDirection.Right;
+            if(randomValue == 2) return DirectionController.WallBuildDirection.Down;
+            if(randomValue == 3) return DirectionController.WallBuildDirection.Left;
+
+            return DirectionController.WallBuildDirection.Up;
+        }
+        private LeadingTile GetRandomLeadingTile()
+        {
+            return _leadingTiles.ElementAt(_random.Next(0, _leadingTiles.Count));
         }
         /// <summary>
         /// This method create border with walls and init ours LeadingTile
@@ -87,6 +132,8 @@ namespace Maze.MazeGenerators
             var leadingTile = new LeadingTile(position, TileSetting.Size, TileSetting.LeadingBrush);
 
             Maze[position.X, position.Y] = leadingTile;
+
+            _leadingTiles.Add(leadingTile);
         }
         private void AddRoadTile(Point position)
         {
@@ -94,5 +141,24 @@ namespace Maze.MazeGenerators
 
             Maze[position.X, position.Y] = roadTile;
         }
+
+        /// <summary>
+        /// Check if is leading tile on current possition
+        /// If leading tile exist, remove it from list
+        /// </summary>
+        /// <param name="arrayPosition"></param>
+        private void HandleLeadingTile(Point arrayPosition)
+        {
+            var tile = Maze[arrayPosition.X, arrayPosition.Y];
+
+            if (LeadingTile.IsLeadingTile(tile))
+                RemoveLeadingTile(tile as LeadingTile);
+
+        }
+        private void RemoveLeadingTile(LeadingTile tile)
+        {
+            _leadingTiles.Remove(tile);
+        }
+     
     }
 }

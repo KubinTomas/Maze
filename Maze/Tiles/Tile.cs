@@ -9,7 +9,7 @@ namespace Maze.Tiles
 {
     public abstract class Tile
     {
-        protected Point ArrayPosition { get; set; }
+        public Point ArrayPosition { get; protected set; }
 
         protected Size Size { get; set; }
 
