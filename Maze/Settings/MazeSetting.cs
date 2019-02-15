@@ -9,6 +9,6 @@ namespace Maze.Settings
 {
     static class MazeSetting
     {
-        public static Size MazeSize = new Size(50,50);
+        public static Size MazeSize = new Size(200,200);
     }
 }
