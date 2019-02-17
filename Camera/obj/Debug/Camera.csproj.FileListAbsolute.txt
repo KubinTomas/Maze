@@ -7,3 +7,12 @@ C:\Users\Kubin\OneDrive\Plocha\Work\Programming\Maze\Camera\obj\Debug\Camera.csp
 C:\Users\Kubin\OneDrive\Plocha\Work\Programming\Maze\Camera\obj\Debug\Camera.csproj.CopyComplete
 C:\Users\Kubin\OneDrive\Plocha\Work\Programming\Maze\Camera\obj\Debug\Camera.dll
 C:\Users\Kubin\OneDrive\Plocha\Work\Programming\Maze\Camera\obj\Debug\Camera.pdb
+C:\Users\Kubin\Desktop\Projects to portfolio\Uploaded projects\Maze\Camera\obj\Debug\Camera.csprojAssemblyReference.cache
+C:\Users\Kubin\Desktop\Projects to portfolio\Uploaded projects\Maze\Camera\obj\Debug\Camera.csproj.CoreCompileInputs.cache
+C:\Users\Kubin\Desktop\Projects to portfolio\Uploaded projects\Maze\Camera\obj\Debug\Camera.dll
+C:\Users\Kubin\Desktop\Projects to portfolio\Uploaded projects\Maze\Camera\obj\Debug\Camera.pdb
+C:\Users\Kubin\Desktop\Projects to portfolio\Uploaded projects\Maze\Camera\bin\Debug\Camera.dll
+C:\Users\Kubin\Desktop\Projects to portfolio\Uploaded projects\Maze\Camera\bin\Debug\Camera.pdb
+C:\Users\Kubin\Desktop\Projects to portfolio\Uploaded projects\Maze\Camera\bin\Debug\MathExtension.dll
+C:\Users\Kubin\Desktop\Projects to portfolio\Uploaded projects\Maze\Camera\bin\Debug\MathExtension.pdb
+C:\Users\Kubin\Desktop\Projects to portfolio\Uploaded projects\Maze\Camera\obj\Debug\Camera.csproj.CopyComplete

@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Maze));
             this.canvas = new System.Windows.Forms.PictureBox();
+            this.MoveChecker = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.canvas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,6 +44,12 @@
             this.canvas.TabIndex = 0;
             this.canvas.TabStop = false;
             this.canvas.Paint += new System.Windows.Forms.PaintEventHandler(this.canvas_Paint);
+            // 
+            // MoveChecker
+            // 
+            this.MoveChecker.Enabled = true;
+            this.MoveChecker.Interval = 50;
+            this.MoveChecker.Tick += new System.EventHandler(this.MoveChecker_Tick);
             // 
             // Maze
             // 
@@ -62,6 +70,7 @@
         #endregion
 
         private System.Windows.Forms.PictureBox canvas;
+        private System.Windows.Forms.Timer MoveChecker;
     }
 }
 

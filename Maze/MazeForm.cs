@@ -12,6 +12,7 @@ using Maze.MazeGenerators;
 using Maze.Singletons;
 using Maze.Controllers;
 using Camera;
+using MathExtension;
 
 namespace Maze
 {
@@ -20,8 +21,6 @@ namespace Maze
         private MazeKeysController _mazeKeysController;
         private MazeController _mazeController;
         private CameraBase _camera;
-
-        private Dictionary<Keys, bool> _pressedKeys;
 
         public Maze()
         {
@@ -63,16 +62,36 @@ namespace Maze
             if (e.KeyCode == Keys.I) MessageBox.Show(_camera.ToString());
             if (e.KeyCode == Keys.Escape) Application.Exit();
 
-            if(e.KeyCode == Keys.W) 
-        }
-
-        private void canvas_Paint(object sender, PaintEventArgs e)
-        {
-            _mazeController.MazeGenerator.DrawMaze(e.Graphics);
+            if (e.KeyCode == Keys.W) _mazeKeysController.ActiveKey(Keys.W);
+            if (e.KeyCode == Keys.A) _mazeKeysController.ActiveKey(Keys.A);
+            if (e.KeyCode == Keys.S) _mazeKeysController.ActiveKey(Keys.S);
+            if (e.KeyCode == Keys.D) _mazeKeysController.ActiveKey(Keys.D);
         }
 
         private void Maze_KeyUp(object sender, KeyEventArgs e)
         {
+            if (e.KeyCode == Keys.W) _mazeKeysController.DeactiveKey(Keys.W);
+            if (e.KeyCode == Keys.A) _mazeKeysController.DeactiveKey(Keys.A);
+            if (e.KeyCode == Keys.S) _mazeKeysController.DeactiveKey(Keys.S);
+            if (e.KeyCode == Keys.D) _mazeKeysController.DeactiveKey(Keys.D);
+        }
+
+        private void canvas_Paint(object sender, PaintEventArgs e)
+        {
+            _camera.UpdateObjectsRelativeToCamera(_mazeController.MazeGenerator.ConvertMazeToICameraObject());
+
+            _mazeController.MazeGenerator.DrawMaze(e.Graphics);
+
+            //e.Graphics.DrawString(_mazeKeysController.GetVectorFromPressedKeys().ToString(), new System.Drawing.Font("Arial", 16), Brushes.Red, new Point(300, 300));
+        }
+
+        private void MoveChecker_Tick(object sender, EventArgs e)
+        {
+            var vector = _mazeKeysController.GetVectorFromPressedKeys();
+
+            _camera.Move(vector);
+
+            Refresher.Instance.Refresh();
 
         }
     }

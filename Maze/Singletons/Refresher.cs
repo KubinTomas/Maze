@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Camera;
 
 namespace Maze.Singletons
 {
@@ -13,7 +14,9 @@ namespace Maze.Singletons
     class Refresher
     {
         private static Refresher instance;
+
         private PictureBox _canvas;
+        private CameraBase _camera;
 
         private Refresher() { }
 
@@ -30,9 +33,18 @@ namespace Maze.Singletons
         {
             _canvas = canvas;
         }
+        public void SetCamera(CameraBase camera)
+        {
+            _camera = camera;
+        }
         public void Refresh()
         {
             _canvas.Refresh();
+        }
+        public void RefreshWithCam()
+        {
+            Refresh();
+
         }
     }
 }

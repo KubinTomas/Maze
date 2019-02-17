@@ -23,3 +23,8 @@ C:\Users\Kubin\OneDrive\Plocha\Work\Programming\Maze\Maze\bin\Debug\MathExtensio
 C:\Users\Kubin\OneDrive\Plocha\Work\Programming\Maze\Maze\bin\Debug\Camera.pdb
 C:\Users\Kubin\OneDrive\Plocha\Work\Programming\Maze\Maze\bin\Debug\MathExtension.pdb
 C:\Users\Kubin\OneDrive\Plocha\Work\Programming\Maze\Maze\obj\Debug\Maze.csproj.CopyComplete
+C:\Users\Kubin\Desktop\Projects to portfolio\Uploaded projects\Maze\Maze\bin\Debug\Camera.dll
+C:\Users\Kubin\Desktop\Projects to portfolio\Uploaded projects\Maze\Maze\bin\Debug\MathExtension.dll
+C:\Users\Kubin\Desktop\Projects to portfolio\Uploaded projects\Maze\Maze\bin\Debug\Camera.pdb
+C:\Users\Kubin\Desktop\Projects to portfolio\Uploaded projects\Maze\Maze\bin\Debug\MathExtension.pdb
+C:\Users\Kubin\Desktop\Projects to portfolio\Uploaded projects\Maze\Maze\obj\Debug\Maze.csproj.CopyComplete

@@ -4,3 +4,9 @@ C:\Users\Kubin\OneDrive\Plocha\Work\Programming\Maze\MathExtension\obj\Debug\Mat
 C:\Users\Kubin\OneDrive\Plocha\Work\Programming\Maze\MathExtension\obj\Debug\MathExtension.csproj.CoreCompileInputs.cache
 C:\Users\Kubin\OneDrive\Plocha\Work\Programming\Maze\MathExtension\obj\Debug\MathExtension.dll
 C:\Users\Kubin\OneDrive\Plocha\Work\Programming\Maze\MathExtension\obj\Debug\MathExtension.pdb
+C:\Users\Kubin\Desktop\Projects to portfolio\Uploaded projects\Maze\MathExtension\bin\Debug\MathExtension.dll
+C:\Users\Kubin\Desktop\Projects to portfolio\Uploaded projects\Maze\MathExtension\bin\Debug\MathExtension.pdb
+C:\Users\Kubin\Desktop\Projects to portfolio\Uploaded projects\Maze\MathExtension\obj\Debug\MathExtension.csprojAssemblyReference.cache
+C:\Users\Kubin\Desktop\Projects to portfolio\Uploaded projects\Maze\MathExtension\obj\Debug\MathExtension.csproj.CoreCompileInputs.cache
+C:\Users\Kubin\Desktop\Projects to portfolio\Uploaded projects\Maze\MathExtension\obj\Debug\MathExtension.dll
+C:\Users\Kubin\Desktop\Projects to portfolio\Uploaded projects\Maze\MathExtension\obj\Debug\MathExtension.pdb

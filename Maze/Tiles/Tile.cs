@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Camera;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -7,24 +8,33 @@ using System.Threading.Tasks;
 
 namespace Maze.Tiles
 {
-    public abstract class Tile
+    public abstract class Tile : ICameraObject
     {
         public Point ArrayPosition { get; protected set; }
 
-        protected Size Size { get; set; }
+        protected Size OriginalSize { get; set; }
+        public Size Size { get; set; }
+
+        public Point OriginalPosition { get; set; }
+
+        public Point Position { get; set; }
 
         protected Brush Color { get; set; }
 
         public Tile(Point arrayPosition, Size size, Brush color)
         {
             ArrayPosition = arrayPosition;
-            Size = size;
             Color = color;
 
+            OriginalSize = size;
+            Size = size;
+
+            OriginalPosition = new Point(ArrayPosition.X * Size.Width, ArrayPosition.Y * Size.Height);
+            Position = new Point(ArrayPosition.X * Size.Width, ArrayPosition.Y * Size.Height);
         }
         protected Rectangle GetRectangle()
         {
-           return new Rectangle(GetPosition(), Size);
+           return new Rectangle(Position, Size);
         }
         private Point GetPosition()
         {

@@ -1,4 +1,5 @@
-﻿using Maze.Tiles;
+﻿using Camera;
+using Maze.Tiles;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -34,6 +35,18 @@ namespace Maze.MazeGenerators
         {
             if (tile == null) return;
             tile.Draw(graphics);
+        }
+        public List<ICameraObject> ConvertMazeToICameraObject()
+        {
+            var cameraObjects = new List<ICameraObject>();
+
+            foreach(var maze in Maze)
+            {
+                if (maze != null)
+                    cameraObjects.Add(maze);
+            }
+
+            return cameraObjects;
         }
     }
 }

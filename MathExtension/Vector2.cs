@@ -30,6 +30,11 @@ namespace MathExtension
         {
             point = new Point(x, y);
         }
+        public override string ToString()
+        {
+            return "X: " + X + "Y: " + Y;
+        }
+
         /* Static methods */
         public static Vector2 Zero()
         {

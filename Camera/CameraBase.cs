@@ -16,10 +16,19 @@ namespace Camera
 
         public float Speed { get; set; }
 
+        protected bool _cameraWasChanged;
+
         public abstract void Move(Vector2 vector);
 
+        public abstract void UpdateObjectsRelativeToCamera(List<ICameraObject> objects);
+
+        public bool IsDirty()
+        {
+            return _cameraWasChanged;
+        }
+
         public static int DefaultZoom = 1;
-        public static int DefaultSpeed;
+        public static int DefaultSpeed = 10;
         public static Point DefaultPosition = new Point(0,0);
     }
 }

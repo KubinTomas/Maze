@@ -22,12 +22,24 @@ namespace Camera
         }
         public override void Move(Vector2 vector)
         {
-            Position.X += (int)(vector.X * Speed);
-            Position.Y += (int)(vector.Y * Speed);
+            Position.X = Position.X + (int)(vector.X * Speed);
+            Position.Y = Position.Y + (int)(vector.Y * Speed);
+
+            _cameraWasChanged = true;
         }
         public override string ToString()
         {
             return "PosX:" + Position.X + "PosY:" + Position.Y + "Speed:" + Speed + "Zoom:" + Zoom;
         }
+
+        public override void UpdateObjectsRelativeToCamera(List<ICameraObject> objects)
+        {
+            foreach (var obj in objects)
+            {
+                obj.Position = new Point(obj.OriginalPosition.X + Position.X, +obj.OriginalPosition.Y + Position.Y);
+            }
+        }
+
+
     }
 }
