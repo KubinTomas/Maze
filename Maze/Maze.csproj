@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="Controllers\DirectionController.cs" />
     <Compile Include="Controllers\MazeController.cs" />
+    <Compile Include="Controllers\MazeKeysController.cs" />
     <Compile Include="MazeForm.cs">
       <SubType>Form</SubType>
     </Compile>
