@@ -53,6 +53,7 @@
             this.Name = "Maze";
             this.Text = "Maze";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Maze_KeyDown);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Maze_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.canvas)).EndInit();
             this.ResumeLayout(false);
 

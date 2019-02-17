@@ -17,8 +17,11 @@ namespace Maze
 {
     public partial class Maze : Form
     {
+        private MazeKeysController _mazeKeysController;
         private MazeController _mazeController;
         private CameraBase _camera;
+
+        private Dictionary<Keys, bool> _pressedKeys;
 
         public Maze()
         {
@@ -34,8 +37,9 @@ namespace Maze
             Refresher.Instance.SetCanvas(this.canvas);
 
             _mazeController = new MazeController(new BasicMazeGenerator(MazeSetting.MazeSize));
-
+            _mazeKeysController = new MazeKeysController();
             _camera = new Camera2D();
+
 
             _mazeController.GenerateNewMaze();
             Refresher.Instance.Refresh();
@@ -58,11 +62,18 @@ namespace Maze
             if (e.KeyCode == Keys.R) Refresher.Instance.Refresh();
             if (e.KeyCode == Keys.I) MessageBox.Show(_camera.ToString());
             if (e.KeyCode == Keys.Escape) Application.Exit();
+
+            if(e.KeyCode == Keys.W) 
         }
 
         private void canvas_Paint(object sender, PaintEventArgs e)
         {
             _mazeController.MazeGenerator.DrawMaze(e.Graphics);
+        }
+
+        private void Maze_KeyUp(object sender, KeyEventArgs e)
+        {
+
         }
     }
 }
