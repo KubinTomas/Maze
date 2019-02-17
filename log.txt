@@ -1,5 +1,9 @@
 I will try to write down my project progress.
 
+17.2. 2019 
+- extending my project {adding DLL}
+- adding camera move function
+
 15.2. 2019 /After couple of hours../
 - add whole project structure
 - create basic generate maze algorithm
