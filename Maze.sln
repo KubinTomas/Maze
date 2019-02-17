@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.27703.2047
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Maze", "Maze\Maze.csproj", "{708B9253-24CD-409E-9F4B-E3B14ED04CE4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Camera", "Camera\Camera.csproj", "{285B2EEB-DB7C-4817-B12F-69ABE55F6D55}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathExtension", "MathExtension\MathExtension.csproj", "{CE3796FD-8FB9-4309-BDC5-86070505C736}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{708B9253-24CD-409E-9F4B-E3B14ED04CE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{708B9253-24CD-409E-9F4B-E3B14ED04CE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{708B9253-24CD-409E-9F4B-E3B14ED04CE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{285B2EEB-DB7C-4817-B12F-69ABE55F6D55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{285B2EEB-DB7C-4817-B12F-69ABE55F6D55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{285B2EEB-DB7C-4817-B12F-69ABE55F6D55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{285B2EEB-DB7C-4817-B12F-69ABE55F6D55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE3796FD-8FB9-4309-BDC5-86070505C736}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE3796FD-8FB9-4309-BDC5-86070505C736}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE3796FD-8FB9-4309-BDC5-86070505C736}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE3796FD-8FB9-4309-BDC5-86070505C736}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -90,5 +90,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Camera\Camera.csproj">
+      <Project>{285b2eeb-db7c-4817-b12f-69abe55f6d55}</Project>
+      <Name>Camera</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MathExtension\MathExtension.csproj">
+      <Project>{ce3796fd-8fb9-4309-bdc5-86070505c736}</Project>
+      <Name>MathExtension</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

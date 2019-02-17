@@ -18,3 +18,8 @@ C:\Users\Kubin\Desktop\Projects to portfolio\Uploaded projects\Maze\Maze\obj\Deb
 C:\Users\Kubin\Desktop\Projects to portfolio\Uploaded projects\Maze\Maze\obj\Debug\Maze.csproj.CoreCompileInputs.cache
 C:\Users\Kubin\Desktop\Projects to portfolio\Uploaded projects\Maze\Maze\obj\Debug\Maze.exe
 C:\Users\Kubin\Desktop\Projects to portfolio\Uploaded projects\Maze\Maze\obj\Debug\Maze.pdb
+C:\Users\Kubin\OneDrive\Plocha\Work\Programming\Maze\Maze\bin\Debug\Camera.dll
+C:\Users\Kubin\OneDrive\Plocha\Work\Programming\Maze\Maze\bin\Debug\MathExtension.dll
+C:\Users\Kubin\OneDrive\Plocha\Work\Programming\Maze\Maze\bin\Debug\Camera.pdb
+C:\Users\Kubin\OneDrive\Plocha\Work\Programming\Maze\Maze\bin\Debug\MathExtension.pdb
+C:\Users\Kubin\OneDrive\Plocha\Work\Programming\Maze\Maze\obj\Debug\Maze.csproj.CopyComplete

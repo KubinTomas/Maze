@@ -11,12 +11,14 @@ using System.Windows.Forms;
 using Maze.MazeGenerators;
 using Maze.Singletons;
 using Maze.Controllers;
+using Camera;
 
 namespace Maze
 {
     public partial class Maze : Form
     {
         private MazeController _mazeController;
+        private CameraBase _camera;
 
         public Maze()
         {
@@ -32,6 +34,8 @@ namespace Maze
             Refresher.Instance.SetCanvas(this.canvas);
 
             _mazeController = new MazeController(new BasicMazeGenerator(MazeSetting.MazeSize));
+
+            _camera = new Camera2D();
 
             _mazeController.GenerateNewMaze();
             Refresher.Instance.Refresh();
@@ -52,8 +56,8 @@ namespace Maze
             if (e.KeyCode == Keys.G) _mazeController.MazeGenerator.Generate();
             if (e.KeyCode == Keys.N) _mazeController.GenerateNewMaze();
             if (e.KeyCode == Keys.R) Refresher.Instance.Refresh();
-
-
+            if (e.KeyCode == Keys.I) MessageBox.Show(_camera.ToString());
+            if (e.KeyCode == Keys.Escape) Application.Exit();
         }
 
         private void canvas_Paint(object sender, PaintEventArgs e)

@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Maze.Settings
+namespace MathExtension
 {
-    static class MazeSetting
+    public abstract class Vector
     {
-        public static Size MazeSize = new Size(20,20);
     }
 }

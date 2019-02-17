@@ -13,6 +13,6 @@ namespace Maze.Settings
         public static Brush LeadingBrush { get; set; } = Brushes.Orange;
         public static Brush RoadBrush { get; set; } = Brushes.LightGray;
 
-        public static Size Size = new Size(5, 5);
+        public static Size Size = new Size(20, 20);
     }
 }

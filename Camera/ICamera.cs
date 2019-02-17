@@ -1,14 +1,15 @@
-﻿using System;
+﻿using MathExtension;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Maze.Settings
+namespace Camera
 {
-    static class MazeSetting
+    interface ICamera
     {
-        public static Size MazeSize = new Size(20,20);
+        void Move(Vector2 vector);
     }
 }
