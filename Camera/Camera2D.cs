@@ -18,7 +18,8 @@ namespace Camera
         {
             Position = CameraBase.DefaultPosition;
             Speed = CameraBase.DefaultSpeed;
-            Zoom = CameraBase.DefaultZoom;
+
+            ZoomObj = new Zoom();
         }
         public override void Move(Vector2 vector)
         {
@@ -27,19 +28,26 @@ namespace Camera
 
             _cameraWasChanged = true;
         }
+
         public override string ToString()
         {
-            return "PosX:" + Position.X + "PosY:" + Position.Y + "Speed:" + Speed + "Zoom:" + Zoom;
+            return "PosX: " + Position.X + "PosY: " + Position.Y + "Speed: " + Speed + "Zoom: " + ZoomObj.Value;
         }
 
         public override void UpdateObjectsRelativeToCamera(List<ICameraObject> objects)
         {
             foreach (var obj in objects)
             {
-                obj.Position = new Point(obj.OriginalPosition.X + Position.X, +obj.OriginalPosition.Y + Position.Y);
+                obj.Position = new Point(obj.OriginalPosition.X + Position.X, + obj.OriginalPosition.Y + Position.Y);
             }
         }
 
+        public override void ZoomCamera(Zoom.ZoomStatus zoomStatus)
+        {
+            if (zoomStatus == Zoom.ZoomStatus.Up) ZoomOut();
+            if (zoomStatus == Zoom.ZoomStatus.Down) ZoomIn();
 
+            _cameraWasChanged = true;
+        }
     }
 }

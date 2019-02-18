@@ -12,7 +12,7 @@ namespace Camera
     {
         public Point Position;
 
-        public float Zoom { get; set; }
+        public Zoom ZoomObj { get; set; }
 
         public float Speed { get; set; }
 
@@ -20,7 +20,18 @@ namespace Camera
 
         public abstract void Move(Vector2 vector);
 
+        public abstract void ZoomCamera(Zoom.ZoomStatus zoomStatus);
+
         public abstract void UpdateObjectsRelativeToCamera(List<ICameraObject> objects);
+
+        protected void ZoomIn()
+        {
+            ZoomObj.Value += ZoomObj.Speed;
+        }
+        protected void ZoomOut()
+        {
+            ZoomObj.Value = ZoomObj.Speed;
+        }
 
         public bool IsDirty()
         {
@@ -28,6 +39,8 @@ namespace Camera
         }
 
         public static int DefaultZoom = 1;
+        public static float DefaultZoomSpeed = 0.05f;
+
         public static int DefaultSpeed = 10;
         public static Point DefaultPosition = new Point(0,0);
     }
