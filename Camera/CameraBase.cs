@@ -30,7 +30,7 @@ namespace Camera
         }
         protected void ZoomOut()
         {
-            ZoomObj.Value = ZoomObj.Speed;
+            ZoomObj.Value -= ZoomObj.Speed;
         }
 
         public bool IsDirty()

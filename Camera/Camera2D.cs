@@ -44,8 +44,8 @@ namespace Camera
 
         public override void ZoomCamera(Zoom.ZoomStatus zoomStatus)
         {
-            if (zoomStatus == Zoom.ZoomStatus.Up) ZoomOut();
-            if (zoomStatus == Zoom.ZoomStatus.Down) ZoomIn();
+            if (zoomStatus == Zoom.ZoomStatus.ZoomOut) ZoomOut();
+            if (zoomStatus == Zoom.ZoomStatus.ZoomIn) ZoomIn();
 
             _cameraWasChanged = true;
         }
