@@ -12,7 +12,7 @@ namespace Camera
 
         public float Speed { get; set; }
 
-        public enum ZoomStatus { Up, Down };
+        public enum ZoomStatus { ZoomIn, ZoomOut, Nothing };
 
         public Zoom()
         {

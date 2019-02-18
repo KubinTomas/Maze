@@ -62,18 +62,28 @@ namespace Maze
             if (e.KeyCode == Keys.I) MessageBox.Show(_camera.ToString());
             if (e.KeyCode == Keys.Escape) Application.Exit();
 
+            //Keys for camera moving
             if (e.KeyCode == Keys.W) _mazeKeysController.ActiveKey(Keys.W);
             if (e.KeyCode == Keys.A) _mazeKeysController.ActiveKey(Keys.A);
             if (e.KeyCode == Keys.S) _mazeKeysController.ActiveKey(Keys.S);
             if (e.KeyCode == Keys.D) _mazeKeysController.ActiveKey(Keys.D);
+
+            //Keys for camera zooming
+            if (e.KeyCode == Keys.K) _mazeKeysController.ActiveKey(_mazeKeysController.ZoomInKey);
+            if (e.KeyCode == Keys.L) _mazeKeysController.ActiveKey(_mazeKeysController.ZoomOutKey);
         }
 
         private void Maze_KeyUp(object sender, KeyEventArgs e)
         {
+            //Keys for camera moving
             if (e.KeyCode == Keys.W) _mazeKeysController.DeactiveKey(Keys.W);
             if (e.KeyCode == Keys.A) _mazeKeysController.DeactiveKey(Keys.A);
             if (e.KeyCode == Keys.S) _mazeKeysController.DeactiveKey(Keys.S);
             if (e.KeyCode == Keys.D) _mazeKeysController.DeactiveKey(Keys.D);
+
+            //Keys for camera zooming
+            if (e.KeyCode == Keys.K) _mazeKeysController.DeactiveKey(_mazeKeysController.ZoomInKey);
+            if (e.KeyCode == Keys.L) _mazeKeysController.DeactiveKey(_mazeKeysController.ZoomOutKey);
         }
 
         private void canvas_Paint(object sender, PaintEventArgs e)

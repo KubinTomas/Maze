@@ -5,12 +5,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Camera;
 
 namespace Maze.Controllers
 {
     public class MazeKeysController
     {
         private Dictionary<Keys, bool> _pressedKeys;
+
+        public readonly Keys ZoomInKey = Keys.K;
+        public readonly Keys ZoomOutKey = Keys.L;
 
         public MazeKeysController()
         {
@@ -42,6 +46,16 @@ namespace Maze.Controllers
         private bool ContainsKey(Keys key)
         {
             return _pressedKeys.ContainsKey(key);
+        }
+        public Zoom.ZoomStatus GetZoomStatusFromPressedKeys()
+        {
+            if (ContainsKey(ZoomInKey) && _pressedKeys[ZoomInKey] && (ContainsKey(ZoomOutKey) && !_pressedKeys[ZoomOutKey]))
+                return Zoom.ZoomStatus.ZoomIn;
+
+            if (ContainsKey(ZoomOutKey) && _pressedKeys[ZoomOutKey] && (ContainsKey(ZoomInKey) && !_pressedKeys[ZoomInKey]))
+                return Zoom.ZoomStatus.ZoomOut;
+
+            return Zoom.ZoomStatus.Nothing;
         }
         public Vector2 GetVectorFromPressedKeys()
         {
